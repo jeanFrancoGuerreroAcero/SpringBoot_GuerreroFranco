@@ -1,14 +1,23 @@
 package com.example.dia4.domain;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name  = "personas")
+//Bidireccional
+//manytoOne
+//onetoMany
+//oneToOne
+//manyToMany (Llaves compuestas)
+
 public class person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +30,9 @@ public class person {
 
     public person() {
     }
+
+    @OneToMany
+    private List<Rol> role;
 
     public person(Long id, String name, String lastName, String languaje) {
         this.id = id;
