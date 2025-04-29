@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.dia4.applicatin.service.personService;
+import com.example.dia4.domain.Rol;
 import com.example.dia4.domain.person;
 
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,7 +31,19 @@ public class ApiController {
         @RequestParam(name = "value", defaultValue =  "")String value
     ){
 
-       List<person> results = personService.findByFilter(filter, value);
+       List<person> results = personService.findByUsersFilter(filter, value);
+
+        return results;
+    }
+
+    
+    @GetMapping("/roles")
+    public List<Rol> findAllByRoles(
+        @RequestParam(name = "filter", defaultValue = "") String filter,
+        @RequestParam(name = "value", defaultValue =  "")String value
+    ){
+
+       List<Rol> results = personService.finByRolesByFilter(filter, value);
 
         return results;
     }
