@@ -9,4 +9,5 @@ public interface personService {
 
     public List<person> findByUsersFilter(String filter, String value);
     public List<Rol> finByRolesByFilter(String filter, String values);
+    public Rol createNewRol(String name);
 }
