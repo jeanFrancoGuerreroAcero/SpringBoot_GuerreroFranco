@@ -26,7 +26,7 @@ public class Rol {
     private String name;
     
 
-    @OneToMany(mappedBy = "role", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "role", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<person> persons = new ArrayList<>();
 
     public Rol() {

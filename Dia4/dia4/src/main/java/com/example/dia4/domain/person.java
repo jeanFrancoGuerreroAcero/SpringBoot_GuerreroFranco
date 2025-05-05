@@ -49,7 +49,7 @@ public class person {
     @JsonBackReference //marcar el lado que no se serializa
     private Rol role;
 
-    @OneToOne(mappedBy = "person")
+    @OneToOne(mappedBy = "person", cascade = CascadeType.REMOVE)
     @JsonManagedReference
     private Passport passport;
 
