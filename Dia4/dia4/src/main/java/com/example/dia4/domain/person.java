@@ -111,4 +111,13 @@ public class person {
     public void setRole(Rol role) {
         this.role = role;
     }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
+    }
+
 }

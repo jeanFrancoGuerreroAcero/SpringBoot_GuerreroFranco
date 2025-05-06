@@ -1,22 +1,18 @@
 package com.example.dia4.domain.dto;
 
-public class PersonRequest {
-    private String name, surname, skill, passport;
+public class PersonResponse {
+    private String name, surname, Skill;
+    private boolean passport;
 
-    public PersonRequest(String name, String surname, String skill) {
-        this.name = name;
-        this.surname = surname;
-        this.skill = skill;
+    public PersonResponse() {
     }
 
-    public PersonRequest(String name, String surname, String skill, String passport) {
+    
+    public PersonResponse(String name, String surname, String skill, boolean passport) {
         this.name = name;
         this.surname = surname;
-        this.skill = skill;
+        Skill = skill;
         this.passport = passport;
-    }
-
-    public PersonRequest() {
     }
 
     public String getName() {
@@ -36,22 +32,22 @@ public class PersonRequest {
     }
 
     public String getSkill() {
-        return skill;
+        return Skill;
     }
 
     public void setSkill(String skill) {
-        this.skill = skill;
+        Skill = skill;
     }
 
-    public String getPassport() {
+    public boolean isPassport() {
         return passport;
     }
 
-    public void setPassport(String passport) {
+    public void setPassport(boolean passport) {
         this.passport = passport;
     }
 
     
 
-    
+
 }
